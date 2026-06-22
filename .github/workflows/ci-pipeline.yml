@@ -33,7 +33,10 @@ on:
         required: false
         default: false
         type: boolean
-      
+    outputs:
+      image-tag:
+        description: "Docker image tag"
+        value: ${{ jobs.build.outputs.image-tag }} 
         
     secrets:
       SONAR_TOKEN:
